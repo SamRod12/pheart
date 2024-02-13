@@ -23,9 +23,9 @@ const ValentineModule = () => {
         {heartClicked && (
           <div className="flex justify-center items-center h-screen">
             <Card onClose={handleHeartClick} heartClick={heartClicked}>
-            "He creado esta carta con el único fin de darte una flor indestructible. 
+            He creado esta carta con el único fin de darte una flor indestructible. 
             Puedes venir en cualquier momento a verla, en cualquier lugar, 
-            en cualquier momento. Y recuerda que te amo y te amaré por siempre."
+            en cualquier momento. Y recuerda que te amo y te amaré por siempre.
             </Card>
           </div>
         )}
