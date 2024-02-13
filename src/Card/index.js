@@ -28,7 +28,7 @@ const Card = ({ children, onClose , heartClick}) => {
                             <FaTimes className="h-5 w-5" />
                         </button>
                         <div className="text-center">
-                            <h2 className="text-lg font-semibold text-gray-800">text</h2>
+                            <h2 className="text-lg font-semibold text-gray-800">Para mi amor</h2>
                         </div>
                     </div>
                     <div className="body-card flex justify-center">
@@ -39,7 +39,7 @@ const Card = ({ children, onClose , heartClick}) => {
                         />
                     </div>
                     <div className="footer-card text-right" > 
-                        <p className="text-gray-700">text </p>
+                        <p className="text-gray-700">Con cariño tu esposo: Leo</p>
                         <Image
                         src="/orchid.svg"
                         alt="orchid"
