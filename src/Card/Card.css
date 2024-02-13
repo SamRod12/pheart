@@ -1,0 +1,197 @@
+.card {
+    width: 45vw;
+    height: 20vw;
+    transition: all 0.2s;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .card-inner {
+    width: inherit;
+    height: inherit;
+    padding: 5%;
+    background: rgba(255, 255, 255, 0.384);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+  }
+  .Icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1vw; /* Ajuste relativo */
+    width: 1vw; /* Ajuste relativo */
+    font-size: 2vw; /* Ajuste relativo */
+    font-weight: 700; /* Sombra para resaltar el icono */
+    transition: transform 0.5s ease, color 0.3s ease; /* Transiciones suaves */
+    transform-style: preserve-3d; /* Indica que los elementos hijos deben conservar su 3D */
+    perspective: 1000px;
+  }
+.Icon:hover{
+    transform: rotateX(390deg) rotateY(40deg) scale(2);
+    filter: saturate(1000%);
+}
+  .Icon-delete{
+    position:absolute;
+    top:-1vh;
+    right:2vh;
+    color:rgb(236, 236, 236);
+}
+.Icon-delete.figure svg:hover {
+    color:rgb(240, 11, 11);
+    filter: drop-shadow(2px 2px 10px #ff0d0d) brightness(1.5) saturate(1.5);
+    }
+.Icon-delete svg{
+    transform: scale(1.4)
+}
+
+  .circle {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(#b0e63300, #53ef7d00);
+    border-radius: 50%;
+    position: absolute;
+    animation: move-up6 2s ease-in infinite alternate-reverse;
+  }
+  
+  .circle:nth-child(1) {
+    top: -25px;
+    left: -25px;
+  }
+  
+  .circle:nth-child(2) {
+    bottom: -25px;
+    right: -25px;
+    animation-name: move-down1;
+  }
+
+
+  .circle::before,
+  .circle::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    border-radius: 5em 5em 0 0;
+    animation: coldblue 3s infinite;
+  }
+  
+  .circle::before {
+    left: 50px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+  
+  .circle::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+  
+  @media screen and (max-width: 800px) {
+      .Icon-delete svg{
+          transform: scale(3);/* Ajuste relativo *//* Aumenta el tamaño para pantallas más pequeñas */
+      }
+        .card {
+          width: 80vw;
+          height: 45vw;
+        }
+
+  }
+@media screen and (max-width: 600px) {
+    .Icon-delete svg{
+        transform: scale(4);/* Ajuste relativo *//* Aumenta el tamaño para pantallas más pequeñas */
+    }
+      .card {
+        width: 80vw;
+        height: 75vw;
+      }
+
+}
+
+@media screen and (max-width: 400px) {
+    .Icon-delete svg{
+        transform: scale(4);/* Ajuste relativo *//* Aumenta el tamaño para pantallas más pequeñas */
+    }
+    .card {
+        width: 80vw;
+        height: 150vw;
+      }
+}
+  @keyframes move-up6 {
+    to {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes move-down1 {
+    to {
+      transform: translateY(20px);
+    }
+  }
+
+  .animate-pop-out {
+    animation: popOut 0.8s ease forwards;
+  }
+  @keyframes popOut {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 10px;
+}
+
+div.body-card{
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    height: 80%;
+}
+div.body-card textarea{
+    background-color: rgba(255, 255, 255, 0);
+    padding: 10px;
+    width: 100%;
+    resize: none;
+    pointer-events: none;
+    cursor: none;
+}
+div.footer-card {
+    text-align: end;
+    padding-top: 10px;
+}
+
+div.header-card {
+    text-align: start;
+    margin-top: 0;
+}
+
+div h2 {
+    margin-bottom: 0;
+}
+.orchid{
+    position: absolute;
+    transform: rotate(-20deg);
+    left: -10%;
+    top: 80%;
+    animation: fade-in 3s ease forwards;
+}
+
+@keyframes fade-in {
+    0%{
+        filter:opacity(0) drop-shadow(2px 2px 100px #c56fff) brightness(1) saturate(2);
+    }
+    100%{
+        filter: opacity(100) drop-shadow(2px 2px 1000px #c56fff) brightness(1) saturate(2);
+    }
+}

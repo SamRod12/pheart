@@ -4,30 +4,69 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 255, 179, 205;
+  --background-end-rgb: 255, 179, 205;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 255, 179, 205;
+    --background-end-rgb: 255, 179, 205;
   }
 }
 
 body {
+  position: relative;
   color: rgb(var(--foreground-rgb));
+  background: linear-gradient( rgb(231, 41, 107),rgba(255, 70, 135, 0.678), rgb(231, 41, 107));
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 36.5%;
+  left: -50%;
+  width: 200vw;
+  height: 25%;
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  z-index: -1; /* Coloca el fondo detrás de todo el contenido */
+  
 }
+
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+body.heart-clicked::before {
+  transform: rotate(0deg); 
+  animation: rotateBackground 0.3s linear forwards;
+}
+
+@keyframes rotateBackground {
+  
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+body:not(.heart-clicked)::before {
+  transform: rotate(45deg); 
+  animation: rotateBackgroundReverse 0.3s linear forwards;
+}
+
+@keyframes rotateBackgroundReverse {
+  to {
+    transform: rotate(0deg); /* Rotación final inversa */
   }
 }
