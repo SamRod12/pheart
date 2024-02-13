@@ -41,7 +41,7 @@ const Card = ({ children, onClose , heartClick}) => {
                     <div className="footer-card text-right" > 
                         <p className="text-gray-700">Con cariño tu esposo: Leo</p>
                         <Image
-                        src="/orchid.svg"
+                        src="https://github.com/SamRod12/pheart/blob/2cb47eb0ced55e0d75dd0bfc5d2ca6e87a8dd567/public/orchid.svg"
                         alt="orchid"
                         width={100}
                         height={24}
@@ -55,7 +55,7 @@ const Card = ({ children, onClose , heartClick}) => {
                 {openModal && (
                     <Modal>
                         <Image
-                            src="/orchid.svg"
+                            src="https://github.com/SamRod12/pheart/blob/2cb47eb0ced55e0d75dd0bfc5d2ca6e87a8dd567/public/orchid.svg"
                             alt="orchid"
                             width={100}
                             height={24}
