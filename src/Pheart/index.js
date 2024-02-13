@@ -1,8 +1,6 @@
 'use client'
 import React from 'react';
 import { Heart } from './Heart';
-import { FaHeart } from "react-icons/fa";
-import { FaHeartCrack as FaHeartBroken }  from "react-icons/fa6";
 import { Card } from '@/Card';
 
 const ValentineModule = () => {
