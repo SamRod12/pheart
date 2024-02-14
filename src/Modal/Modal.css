@@ -17,7 +17,7 @@
     position: relative;
     padding: 20px;
     width: 75%;
-    height: 60%;
+    height: 75%;
     max-width: 100%; /* Ancho máximo del contenido */
     max-height: 100%; /* Altura máxima del contenido */
     overflow: auto; /* Hacer el modal desplazable si el contenido es demasiado grande */
